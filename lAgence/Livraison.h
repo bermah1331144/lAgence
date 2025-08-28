@@ -2,16 +2,12 @@
 #include "Vaisseau.h"
 #include <string>
 
-using std::string;
-
-class Transport : public Vaisseau
+class Livraison : public Vaisseau
 {
 public:
-	Transport();
-	~Transport();
+	Livraison();
+	~Livraison();
 
 	virtual std::string to_string();
-
-
 };
 

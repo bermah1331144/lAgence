@@ -10,6 +10,9 @@ Transport::Transport() :Vaisseau()
 
 
 }
+Transport::~Transport() {
+
+}
 std::string Transport::to_string()
 {
 	std::string message = Vaisseau::to_string();

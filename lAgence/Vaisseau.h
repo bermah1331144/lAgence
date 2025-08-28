@@ -12,11 +12,14 @@ protected:
 	int attaque;
 	int defense;
 	int vie;
+	int capacite;
 	int niveau;
 	int exp;
 
 
 public:
+	Vaisseau(string nom,int attaque, int defense,int vie,int capacite,int niveau,int exp);
+	~Vaisseau();
 
 	inline int getValeurMarchande() { return valeurMarchande; }
 
