@@ -1,0 +1,19 @@
+#include "transport.h"
+Transport::Transport() :Vaisseau()
+{
+	nom = "FranciscoTransport";
+	attaque = 10;
+	defense = 50;
+	vie = 100;
+	niveau = 1;
+	exp = 1;
+
+
+}
+std::string Transport::to_string()
+{
+	std::string message = Vaisseau::to_string();
+
+	message.append("Je suis un vaisseau de transport \n");
+	return message;
+}
