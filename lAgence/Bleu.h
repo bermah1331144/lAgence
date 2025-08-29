@@ -1,12 +1,13 @@
 #pragma once
-#include "Vaisseau.h"
+#include "Faction.h"
 #include <string>
 
-class Guerre : public Vaisseau
+
+class Bleu : public Faction
 {
 public:
-	Guerre();
-	~Guerre();
+	Bleu();
+	~Bleu();
 
 	virtual std::string to_string();
 };

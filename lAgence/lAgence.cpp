@@ -5,8 +5,8 @@
 
 int main()
 {
-    Vaisseau monVaisseau(10,10,10,10,"marde",1,10);
+    Vaisseau monVaisseau();
 
-    std::cout <<"Hello" << 
+    std::cout << "Hello" << ;
 }
 

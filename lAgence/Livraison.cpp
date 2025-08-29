@@ -1,6 +1,6 @@
 #include "Livraison.h"
 
-Livraison::Livraison():Vaisseau()
+Livraison::Livraison():Vaisseau(nom,attaque,defense,vie,capacite,niveau,exp)
 {
 	nom = "AmazonLivraison";
 	attaque = 75;
