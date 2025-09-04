@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="Bleu.cpp" />
     <ClCompile Include="Faction.cpp" />
+    <ClCompile Include="FactoryVaisseau.cpp" />
     <ClCompile Include="Guerre.cpp" />
     <ClCompile Include="lAgence.cpp" />
     <ClCompile Include="Livraison.cpp" />
@@ -135,6 +136,7 @@
   <ItemGroup>
     <ClInclude Include="Bleu.h" />
     <ClInclude Include="Faction.h" />
+    <ClInclude Include="FactoryVaisseau.h" />
     <ClInclude Include="Guerre.h" />
     <ClInclude Include="Livraison.h" />
     <ClInclude Include="Rouge.h" />
