@@ -5,8 +5,8 @@
 
 int main()
 {
-    Vaisseau monVaisseau();
+    Vaisseau monVaisseau("Paul", 10,10,10,10,10,10);
 
-    std::cout << "Hello" << ;
+    std::cout << monVaisseau.to_string()  << std::endl ;
 }
 
