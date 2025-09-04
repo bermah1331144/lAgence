@@ -3,6 +3,9 @@
 #include "Guerre.h"
 #include "Transport.h"
 #include "Livraison.h"
+#include "Bleu.h"
+#include "Rouge.h"
+
 inline int genererNbr(int min, int max);
 Vaisseau* FactoryVaisseau::getRandomVaisseau()
 {
@@ -17,16 +20,30 @@ Vaisseau* FactoryVaisseau::getRandomVaisseau()
 	int typeV = genererNbr(1, 3);
 
 	if (typeV == 1)
-		vaisseau = new Guerre;
+		vaisseau = new Guerre(maFaction);
 	else if (typeV == 2)
-		vaisseau = new Transport;
+		vaisseau = new Transport(maFaction);
 	else
-		vaisseau = new Livraison;
+		vaisseau = new Livraison(maFaction);
 
+	return vaisseau;
 
 }
 
+inline Faction* getRandomFaction()
+{
+	Faction* faction(0);
+	int typeFaction = genererNbr(1, 2);
 
+	if (typeFaction == 1) {
+		faction = new Bleu;
+	}
+	else
+		faction = new Rouge;
+
+	return faction;
+
+}
 inline int genererNbr(int min, int max) {
 
 	return (rand() % (max - min + 1)) + min;

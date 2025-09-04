@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-
+#include "Faction.h"
 using std::string;
 class Vaisseau
 {
@@ -15,7 +15,7 @@ protected:
 	int capacite;
 	int niveau;
 	int exp;
-
+	Faction* faction;
 
 public:
 	Vaisseau(string nom,int attaque, int defense,int vie,int capacite,int niveau,int exp);

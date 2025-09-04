@@ -7,7 +7,7 @@ using std::string;
 class Transport : public Vaisseau
 {
 public:
-	Transport();
+	Transport(Faction* maFaction);
 	~Transport();
 
 	virtual std::string to_string();

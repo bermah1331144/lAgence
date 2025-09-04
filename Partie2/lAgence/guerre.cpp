@@ -1,6 +1,6 @@
 #include "guerre.h"
 
-Guerre::Guerre():Vaisseau("monCul",10,10,10,10,1,10)
+Guerre::Guerre(Faction* maFaction):Vaisseau("monCul",10,10,10,10,1,10)
 {
 	nom = "DestroyeurMB";
 	attaque  = 120;
@@ -8,6 +8,7 @@ Guerre::Guerre():Vaisseau("monCul",10,10,10,10,1,10)
 	vie = 90;
 	niveau = 25;
 	exp = 50;
+	Faction* faction= maFaction ;
 
 }
 Guerre::~Guerre() {
