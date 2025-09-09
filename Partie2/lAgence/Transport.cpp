@@ -1,13 +1,7 @@
 #include "transport.h"
 #include "Faction.h"
-Transport::Transport(Faction* maFaction) :Vaisseau("1",10,101,10,10,10,10)
+Transport::Transport(Faction* maFaction) :Vaisseau("FranciscoTransport",10,50,100,1,10,10)
 {
-	nom = "FranciscoTransport";
-	attaque = 10;
-	defense = 50;
-	vie = 100;
-	niveau = 1;
-	exp = 1;
 	Faction* faction = maFaction;
 
 }

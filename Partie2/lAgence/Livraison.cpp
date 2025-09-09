@@ -1,13 +1,7 @@
 #include "Livraison.h"
 #include "Faction.h"
-Livraison::Livraison(Faction* maFaction):Vaisseau(nom,attaque,defense,vie,capacite,niveau,exp)
+Livraison::Livraison(Faction* maFaction):Vaisseau("AmazoneLivraison",75,50,90,0,10,5)
 {
-	nom = "AmazonLivraison";
-	attaque = 75;
-	defense = 50;
-	vie = 90;
-	niveau = 0;
-	exp = 10;
 	Faction* faction = maFaction;
 };
 Livraison::~Livraison()

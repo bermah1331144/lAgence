@@ -18,6 +18,7 @@ protected:
 	Faction* faction;
 
 public:
+	//Ceci est dans mon .h
 	Vaisseau(string nom,int attaque, int defense,int vie,int capacite,int niveau,int exp);
 	~Vaisseau();
 

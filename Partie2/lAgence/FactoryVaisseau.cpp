@@ -10,12 +10,12 @@ inline int genererNbr(int min, int max);
 Vaisseau* FactoryVaisseau::getRandomVaisseau()
 {
 	//init valeur a 0
-	Vaisseau* vaisseau(0);
+	Vaisseau* vaisseau = nullptr;
+	Faction* maFaction = getRandomFaction();
 
 	int max = 0;
 	int min = 0;
 
-	Faction* maFaction = getRandomFaction();
 
 	int typeV = genererNbr(1, 3);
 
@@ -30,9 +30,9 @@ Vaisseau* FactoryVaisseau::getRandomVaisseau()
 
 }
 
-inline Faction* getRandomFaction()
+Faction* getRandomFaction()
 {
-	Faction* faction(0);
+	Faction* faction = nullptr;
 	int typeFaction = genererNbr(1, 2);
 
 	if (typeFaction == 1) {
