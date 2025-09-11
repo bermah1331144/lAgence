@@ -5,17 +5,15 @@
 #include "Livraison.h"
 #include "Bleu.h"
 #include "Rouge.h"
+#include <cstdlib>
 
-inline int genererNbr(int min, int max);
+int genererNbr(int min, int max);
+
 Vaisseau* FactoryVaisseau::getRandomVaisseau()
 {
 	//init valeur a 0
 	Vaisseau* vaisseau = nullptr;
 	Faction* maFaction = getRandomFaction();
-
-	int max = 0;
-	int min = 0;
-
 
 	int typeV = genererNbr(1, 3);
 
@@ -30,16 +28,16 @@ Vaisseau* FactoryVaisseau::getRandomVaisseau()
 
 }
 
-Faction* getRandomFaction()
+Faction* FactoryVaisseau:: getRandomFaction()
 {
 	Faction* faction = nullptr;
 	int typeFaction = genererNbr(1, 2);
 
 	if (typeFaction == 1) {
-		faction = new Bleu;
+		faction = new Bleu();
 	}
 	else
-		faction = new Rouge;
+		faction = new Rouge();
 
 	return faction;
 

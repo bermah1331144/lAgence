@@ -16,10 +16,12 @@ void Station::init()
 }
 std::vector<Vaisseau*> Station::getVaisseauDispo()
 {
-
+	return vecVaisseau;
 }
 
-void ajouterVaisseau(Vaisseau* vaisseau)
+void Station::ajouterVaisseau(Vaisseau* vaisseau)
 {
-
+	if (vaisseau != nullptr) {
+		vecVaisseau.push_back(vaisseau);
+	}
 }
