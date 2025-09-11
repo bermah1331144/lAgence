@@ -21,6 +21,7 @@ public:
 	std::vector<Vaisseau*> getVaisseauDispo();
 	void ajouterVaisseau(Vaisseau* vaisseau);
 	void init();
+	void afficheInfoStation();
 
 private:
 	std::vector<Vaisseau*> vecVaisseau;

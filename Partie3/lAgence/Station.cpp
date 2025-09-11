@@ -25,3 +25,11 @@ void Station::ajouterVaisseau(Vaisseau* vaisseau)
 		vecVaisseau.push_back(vaisseau);
 	}
 }
+void Station::afficheInfoStation()
+{
+
+	cout << "Information de votre station" << endl;
+	cout << "Platinum disponible " << platinumDispo << endl;
+	cout << "Vie restant " << vieStation << endl;
+	cout << "Nombre de vaisseau Disponible " << vecVaisseau.size() << endl;
+}
