@@ -1,0 +1,16 @@
+#include "guerre.h"
+
+Guerre::Guerre(Faction* maFaction):Vaisseau("monCul",10,10,10,10,1,10)
+{
+	Faction* faction= maFaction ;
+
+}
+Guerre::~Guerre() {
+
+}
+std::string Guerre::to_string() {
+	std::string message = Vaisseau::to_string();
+
+	message.append("Je suis un vaisseau qui va tout briser !\n");
+	return message;
+}
