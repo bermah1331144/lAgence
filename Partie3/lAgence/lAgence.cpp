@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include "Vaisseau.h"
+#include "Station.h"
+#include "FactoryVaisseau.h"
 using namespace std;
 
 void afficherVaisseau()
@@ -21,11 +23,9 @@ int main()
     afficherVaisseau();
 
     Vaisseau monVaisseau("Paul", 10, 10, 10, 10, 10, 10);
-    int platinum = 0;
-    int vie = 100;
-    int nbrVaisseauRestant = 5;
     int choix = 0;
-
+    Station maStation(100, 5);
+    maStation.init();
 
     cout << "Bienvenu Chez Nova Industries \n Appuyer sur un touche pour afficher le menu" << endl;
     cin >> choix;
@@ -35,18 +35,55 @@ int main()
         cout << "1. Afficher information des la sation" << endl;
         cout << "2. Liste des vaisseau disponible dans la station " << endl;
         cout << "3.Acheter un vaisseau " << endl;
+        cout << "0. Quitter" << endl;
 
         switch (choix) {
-        case 1:
-            cout << "Information de votre station" << endl;
-            cout << "Platinum disponible " << platinum << endl;
-            cout << "Vie restant " << vie << endl;
-            cout << "Nombre de vaisseau Disponible " << nbrVaisseauRestant << endl;
+            case 1: {
+                maStation.afficheInfoStation();
+                break;
+            }
+            case 2: {
+                auto vaisseaux = maStation.getVaisseauDispo();
+                if (vaisseaux.empty()) {
+                    cout << "Aucun vaisseau dans la station." << endl;
+                }
+                else {
+                    cout << "Nombre total de vaisseau " << vaisseaux.size() << endl;
+                    cout << "\nDétails des vaisseaux " << endl;
+
+                    for (size_t i = 0; i < vaisseaux.size(); i++) {
+                        cout << (i + 1) << "." << vaisseaux[i]->to_string() << endl;
+                    }
+                }
+                break;
+            }    
+
+            case 3: {
+                Vaisseau* newVaisseau = FactoryVaisseau::getRandomVaisseau();
+                maStation.ajouterVaisseau(newVaisseau);
+                cout << "Nouveau vaisseau acheté et ajotuer à la station " << endl;
+                cout << "Détails: " << newVaisseau->to_string() << endl;
+                break;
+            }
+            case 0: {
+                cout << "Au Revoir" << endl;
+            }
+
+
+
+
         }
-    }
 
+        if (choix != 0) {
+            cout << "\nAppuyez sur entre pour continuer"; 
+            cin.ignore();
+            cin.get();
+            
+        }
+    } while (choix != 0);
 
-    cout << monVaisseau.to_string()  << std::endl ;
+    return 0;
+    //cout << monVaisseau.to_string()  << std::endl ;
 
 
 }
