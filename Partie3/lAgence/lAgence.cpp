@@ -4,6 +4,7 @@
 #include "Vaisseau.h"
 #include "Station.h"
 #include "FactoryVaisseau.h"
+#include "Exploration.h"
 using namespace std;
 
 void afficherVaisseau()
@@ -23,8 +24,8 @@ int main()
     afficherVaisseau();
 
     int choix = 0;
-    Station maStation(100, 5);
-    maStation.init();
+    Station NovaStation(100, 5);
+    //maStation.init();
     cout << "Bienvenu Chez Nova Industries \n Appuyer sur un touche pour afficher le menu" << endl;
     cin.get();
 
@@ -39,11 +40,11 @@ int main()
 
         switch (choix) {
             case 1: {
-                maStation.afficheInfoStation();
+                NovaStation.afficheInfoStation();
                 break;
             }
             case 2: {
-                auto vaisseaux = maStation.getVaisseauDispo();
+                auto vaisseaux = NovaStation.getVaisseauDispo();
                 if (vaisseaux.empty()) {
                     cout << "Aucun vaisseau dans la station." << endl;
                 }
@@ -60,7 +61,7 @@ int main()
 
             case 3: {
                 auto newVaisseau = FactoryVaisseau::getRandomVaisseau();
-                maStation.ajouterVaisseau(newVaisseau);
+                NovaStation.ajouterVaisseau(newVaisseau);
                 cout << "Nouveau vaisseau acheté et ajotuer à la station " << endl;
                 cout << "Détails: " << newVaisseau->to_string() << endl;
                 break;

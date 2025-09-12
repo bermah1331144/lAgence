@@ -8,6 +8,7 @@ public:
 	Livraison(Faction* maFaction);
 	~Livraison();
 
+	
 	virtual std::string to_string();
 };
 

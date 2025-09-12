@@ -13,6 +13,7 @@ void Station::init()
 	{
 		vecVaisseau.push_back(FactoryVaisseau::getRandomVaisseau());
 	}
+
 }
 std::vector<Vaisseau*> Station::getVaisseauDispo()
 {
@@ -25,6 +26,8 @@ void Station::ajouterVaisseau(Vaisseau* vaisseau)
 		vecVaisseau.push_back(vaisseau);
 	}
 }
+
+
 void Station::afficheInfoStation()
 {
 
