@@ -22,20 +22,20 @@ int main()
 {
     afficherVaisseau();
 
-    Vaisseau monVaisseau("Paul", 10, 10, 10, 10, 10, 10);
     int choix = 0;
     Station maStation(100, 5);
     maStation.init();
-
     cout << "Bienvenu Chez Nova Industries \n Appuyer sur un touche pour afficher le menu" << endl;
-    cin >> choix;
+    cin.get();
 
     do {
         cout << "\n=== MENU ===" << endl;
-        cout << "1. Afficher information des la sation" << endl;
-        cout << "2. Liste des vaisseau disponible dans la station " << endl;
+        cout << "1.Afficher information des la sation" << endl;
+        cout << "2.Liste des vaisseau disponible dans la station " << endl;
         cout << "3.Acheter un vaisseau " << endl;
+        cout << "4.Envoyer en exploration" << endl;
         cout << "0. Quitter" << endl;
+        cin >> choix;
 
         switch (choix) {
             case 1: {
@@ -59,11 +59,14 @@ int main()
             }    
 
             case 3: {
-                Vaisseau* newVaisseau = FactoryVaisseau::getRandomVaisseau();
+                auto newVaisseau = FactoryVaisseau::getRandomVaisseau();
                 maStation.ajouterVaisseau(newVaisseau);
                 cout << "Nouveau vaisseau acheté et ajotuer à la station " << endl;
                 cout << "Détails: " << newVaisseau->to_string() << endl;
                 break;
+            }
+            case 4: {
+
             }
             case 0: {
                 cout << "Au Revoir" << endl;
@@ -83,7 +86,7 @@ int main()
     } while (choix != 0);
 
     return 0;
-    //cout << monVaisseau.to_string()  << std::endl ;
+
 
 
 }
