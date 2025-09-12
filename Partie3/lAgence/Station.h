@@ -2,6 +2,7 @@
 #include <string>
 #include<vector>
 #include<iostream>
+#include<memory>
 #include "Vaisseau.h"
 using std::string;
 using namespace std;
@@ -25,5 +26,6 @@ public:
 
 private:
 	std::vector<Vaisseau*> vecVaisseau;
+
 };
 

@@ -1,5 +1,6 @@
 #include "Station.h"
 #include"FactoryVaisseau.h"
+#include <memory>
 Station::Station(int _platinumDispo, int _vieStation) : platinumDispo(_platinumDispo), vieStation(_vieStation) {
 
 }
