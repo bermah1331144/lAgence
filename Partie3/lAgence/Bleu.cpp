@@ -1,6 +1,6 @@
 #include "Bleu.h"
 
-Bleu::Bleu() :Faction(attaque, defense, vie, capacite, nom) {
+Bleu::Bleu() :Faction() {
 
 	attaque = 20;
 	defense = 60;

@@ -1,4 +1,8 @@
 #include "Faction.h"
+Faction::Faction()
+{
+
+}
 Faction::Faction(int _attaque, int _defense, int _vie, int _capacite, string _nom) :attaque(5), defense(4), vie(10), capacite(10), nom("Rouge")
 {
 	

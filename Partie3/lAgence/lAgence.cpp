@@ -24,8 +24,9 @@ int main()
     afficherVaisseau();
 
     int choix = 0;
-    Station NovaStation(100, 5);
-    //maStation.init();
+    Station novaStation(100, 5);
+
+    novaStation.init();
     cout << "Bienvenu Chez Nova Industries \n Appuyer sur un touche pour afficher le menu" << endl;
     cin.get();
 
@@ -40,11 +41,11 @@ int main()
 
         switch (choix) {
             case 1: {
-                NovaStation.afficheInfoStation();
+                novaStation.afficheInfoStation();
                 break;
             }
             case 2: {
-                auto vaisseaux = NovaStation.getVaisseauDispo();
+                auto vaisseaux = novaStation.getVaisseauDispo();
                 if (vaisseaux.empty()) {
                     cout << "Aucun vaisseau dans la station." << endl;
                 }
@@ -61,7 +62,7 @@ int main()
 
             case 3: {
                 auto newVaisseau = FactoryVaisseau::getRandomVaisseau();
-                NovaStation.ajouterVaisseau(newVaisseau);
+                novaStation.ajouterVaisseau(newVaisseau);
                 cout << "Nouveau vaisseau acheté et ajotuer à la station " << endl;
                 cout << "Détails: " << newVaisseau->to_string() << endl;
                 break;

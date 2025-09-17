@@ -1,6 +1,6 @@
 #include "Rouge.h"
 
-Rouge::Rouge() :Faction(attaque, defense, vie, capacite,nom)
+Rouge::Rouge() :Faction()
 {
 
 	attaque = 50;

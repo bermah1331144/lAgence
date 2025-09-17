@@ -14,6 +14,7 @@ protected:
 
 
 public:
+	Faction();
 	Faction(int _attaque, int _defense, int _vie, int _capacite, string _nom);
 	~Faction();
 
