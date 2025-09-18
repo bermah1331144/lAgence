@@ -68,7 +68,32 @@ int main()
                 break;
             }
             case 4: {
+                auto listeDeVaisseau = novaStation.getVaisseauDispo();
+                Vaisseau* vaisseauChoisi = listeDeVaisseau[0];
                 
+                if (vaisseauChoisi != nullptr) {
+                    Exploration mission(*vaisseauChoisi);
+                    if (!mission.estTerminee()) {
+                        int choix = 0;
+
+                        while (!mission.estTerminee() && choix != 2) {
+                            cout << "\n Desirez-vous continuer l'Exploration ? " << endl;
+                            cout << "1.oui" << endl;
+                            cout << "2.non (Rentrer a la base) " << endl;
+                                
+                            if (choix == 1) {
+                                mission.diminuerTour();
+                                int ressourceTrouve = mission.getRessources(novaStation);
+                            }
+                        }
+                    }
+                    cout << "\n Fin du programme d'Exploration " << endl;
+
+                    return 0;
+                }
+   
+
+
             }
             case 0: {
                 cout << "Au Revoir" << endl;

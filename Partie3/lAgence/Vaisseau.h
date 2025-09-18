@@ -21,7 +21,7 @@ protected:
 
 public:
 	//Ceci est dans mon .h
-	Vaisseau(string nom,int attaque, int defense,int vie,int capacite,int niveau,int exp, int voyage);
+	Vaisseau(string nom,int attaque, int defense,int vie,int capacite,int niveau,int exp, int exploration);
 	~Vaisseau();
 
 	static int genererVoyageAleatoire(int min = 2, int max = 5);

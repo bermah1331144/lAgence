@@ -4,7 +4,7 @@
 int genererNbr(int min, int max);
 Vaisseau::Vaisseau(string _nom, int _attaque, int _defense, int _vie, int _capacite, int _niveau, int _exp, int _exploration) :nom(_nom), attaque(_attaque), defense(_defense), vie(_vie),capacite(_capacite),niveau(_niveau), exp(_exp), exploration(_exploration)
 {
-
+	
 }
 Vaisseau::~Vaisseau()
 {
